@@ -1,0 +1,17 @@
+{
+    "env": "development",
+    "dbConfig": {
+        "host": "wefox-mongo",
+        "database": "mongoose",
+        "port": 27017
+    },
+    "secretKey": "secretKey",
+    "log": {
+        "format": "dev",
+        "dir": "../logs"
+    },
+    "cors": {
+        "origin": true,
+        "credentials": true
+    }
+}
