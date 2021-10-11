@@ -8,7 +8,7 @@ wefox assessment as a challenge
 ## Installation
 clone wefox-challenge from git repository:
 ```$xslt
-git clone https://github.com/meghrazchi/onlinetrainingapi.git
+https://github.com/meghrazchi/wefox.git
 ```
 build docker containers using below command:
 ```$xslt
