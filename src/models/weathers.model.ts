@@ -5,7 +5,6 @@ const weatherSchema: Schema = new Schema({
   address: {
     type: String,
     required: true,
-    unique: true,
   },
   latitude: {
     type: Number,

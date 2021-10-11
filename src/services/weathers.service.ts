@@ -145,7 +145,9 @@ class WeatherService {
   public async createWeather(weatherData: CreateWeathersDto): Promise<Weather> {
     if (isEmpty(weatherData)) throw new HttpException(400, 'Weather data is not valid');
 
-    const findWeather: Weather = await this.weathers.findOne({ address: weatherData.address });
+    console.log('-==-=-=--==-=-=--==-', weatherData);
+
+    const findWeather: Weather = await this.weathers.findOne({ latitude: weatherData.latitude, longitude: weatherData.longitude });
     if (findWeather) throw new HttpException(409, `You're address ${weatherData.address} already exists`);
 
     const temp = fahrenheitToCelsius(weatherData.temp);
