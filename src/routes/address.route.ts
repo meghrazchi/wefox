@@ -14,7 +14,7 @@ class AddressRoute implements Routes {
   }
 
   private initializeRoutes() {
-    this.router.get(`${this.path}address`, validationMiddleware(CreateAddressesDto, 'body'), this.addressController.validateAddress);
+    this.router.post(`${this.path}address`, validationMiddleware(CreateAddressesDto, 'body'), this.addressController.validateAddress);
   }
 }
 

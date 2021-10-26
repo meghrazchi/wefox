@@ -14,7 +14,7 @@ class AddressService {
   }
 
   public async validateAddress(addressData: CreateAddressesDto): Promise<T> {
-    const address = addressData.streetNumber + ', ' + addressData.street + ',' + addressData.town;
+    const address = addressData.streetNumber + ',' + addressData.street.replace(' ', '+') + ',' + addressData.town;
 
     const baseUrl = process.env.OPEN_STREET_MAP_BASE_URL;
     console.log(`${baseUrl}/search?q=${address}&format=json&polygon=1&addressdetails=1`);
